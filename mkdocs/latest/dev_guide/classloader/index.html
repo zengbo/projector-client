@@ -14,7 +14,7 @@
     
     
       
-        <title>Versions - Projector documentation</title>
+        <title>Projector ClassLoader - Projector documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#versions" class="md-skip">
+        <a href="#purpose" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Versions
+              Projector ClassLoader
             
           </span>
         </div>
@@ -348,14 +348,16 @@
       
 
 
+  
+
 
   
     
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Developer guide
@@ -376,7 +378,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev_guide/ecosystem/" class="md-nav__link">
+    <a href="../ecosystem/" class="md-nav__link">
       Ecosystem
     </a>
   </li>
@@ -387,11 +389,59 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../dev_guide/classloader/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Projector ClassLoader
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Projector ClassLoader
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-projectorclassloader" class="md-nav__link">
+    Initializing ProjectorClassLoader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-for-agent-classes" class="md-nav__link">
+    Support for agent classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -402,7 +452,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev_guide/works/" class="md-nav__link">
+    <a href="../works/" class="md-nav__link">
       Academic works
     </a>
   </li>
@@ -418,16 +468,14 @@
       
 
 
-  
-
 
   
     
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" data-md-state="indeterminate" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       About
@@ -448,7 +496,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../comparison/" class="md-nav__link">
+    <a href="../../about/comparison/" class="md-nav__link">
       Comparison to other remote access solutions
     </a>
   </li>
@@ -461,7 +509,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../usecases/" class="md-nav__link">
+    <a href="../../about/usecases/" class="md-nav__link">
       Use cases
     </a>
   </li>
@@ -472,49 +520,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Versions
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../about/versions/" class="md-nav__link">
       Versions
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#changelogs" class="md-nav__link">
-    Changelogs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -525,7 +535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../contributing/" class="md-nav__link">
+    <a href="../../about/contributing/" class="md-nav__link">
       Contributing
     </a>
   </li>
@@ -538,7 +548,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../coc/" class="md-nav__link">
+    <a href="../../about/coc/" class="md-nav__link">
       Code of conduct
     </a>
   </li>
@@ -564,8 +574,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -574,8 +582,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changelogs" class="md-nav__link">
-    Changelogs
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-projectorclassloader" class="md-nav__link">
+    Initializing ProjectorClassLoader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-for-agent-classes" class="md-nav__link">
+    Support for agent classes
   </a>
   
 </li>
@@ -592,24 +614,87 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/JetBrains/projector-client/edit/master/docSrc/src/doc/docs/about/versions.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/JetBrains/projector-client/edit/master/docSrc/src/doc/docs/dev_guide/classloader.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h1>
-<p>Projector currently doesn't have consistent versioning. It's yet to decide (<a href="https://youtrack.jetbrains.com/issue/PRJ-34">PRJ-34</a>).</p>
-<p>Currently, each subproject uses its own versions.</p>
-<h2 id="changelogs">Changelogs<a class="headerlink" href="#changelogs" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/JetBrains/projector-server/blob/master/projector-plugin/CHANGELOG.md">projector-plugin</a>.</li>
-<li><a href="https://github.com/JetBrains/projector-server/blob/master/projector-server/CHANGELOG.md">projector-server</a>.</li>
-<li><a href="https://github.com/JetBrains/projector-installer/blob/master/CHANGELOG.md">projector-installer</a>.</li>
-<li><a href="https://github.com/JetBrains/projector-client/blob/master/projector-launcher/CHANGELOG.md">projector-launcher</a>.</li>
-</ul>
-<div class="admonition note">
-<p>If we decide to make the versions the same for all the projects, the changelog will be moved here.</p>
+                  <h1>Projector ClassLoader</h1>
+                
+                <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>Allows loading classes from Projector, Projector agent and Intellij Platform without the use of reflection</p>
 </div>
+<p>Default AppClassLoader of Projector Server doesn't know anything about JB IDE and so cannot load its classes as they were loaded by different classloader. Similar, IDE ClassLoader doesn't know anything about Projector classes (and can be gathered only after IDE startup). </p>
+<p>The idea behind ProjectorClassLoader is simple - delegate classloading to the right classloader. If we think classname determines a class from Intellij Platform then we should load it via IDE ClassLoader. If not, then we fall back to load it via AppClassLoader. </p>
+<p>To specify how classes should be loaded with ProjectorClassLoader you need to call one of the <code>forceLoadBy*</code> methods: </p>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>ClassLoader for specified class(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forceLoadByPlatform</code></td>
+<td>AppClassLoader</td>
+</tr>
+<tr>
+<td><code>forceLoadByProjectorClassLoader</code></td>
+<td>ProjectorClassLoader (gather bytecode from any of AppClassLoader or IDE ClassLoader and then define class ourselves)</td>
+</tr>
+<tr>
+<td><code>forceLoadByIdea</code></td>
+<td>IDE ClassLoader (PathClassloader or UrlClassLoader, depending on IDE version)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Another way to specify ClassLoader for class is to apply <code>UseProjectorLoader</code> annotation.</p>
+</div>
+<h2 id="initializing-projectorclassloader">Initializing ProjectorClassLoader<a class="headerlink" href="#initializing-projectorclassloader" title="Permanent link">&para;</a></h2>
+<p>To initialize ProjectorClassLoader, call function 
+<div class="highlight"><pre><span></span><code><span class="k">package</span> <span class="nn">org.jetbrains.projector.server.core.classloader</span>
+
+<span class="k">fun</span> <span class="nf">initClassLoader</span><span class="p">(</span><span class="n">classLoader</span><span class="p">:</span> <span class="n">ClassLoader</span><span class="p">):</span> <span class="n">ClassLoader</span>
+</code></pre></div>
+ somewhere at the entry point of Projector to correctly set up an instance of ProjectorClassLoader: assign IDE ClassLoader when IDE is initialized, define classes that should be force loaded via AppClassLoader or ProjectorClassLoader.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Don't forget to load some other class (which will be the actual entry point for the Projector/Projector agent logic) with returned ClassLoader (if current ClassLoader is not ProjectorClassLoader) to start using ProjectorClassLoader</p>
+</div>
+<p>Currently, function is used at:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Method</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>org.jetbrains.projector.server.ProjectorLauncher</code></td>
+<td><code>main(args: Array&lt;String&gt;)</code></td>
+<td>Default entry point</td>
+</tr>
+<tr>
+<td><code>org.jetbrains.projector.server.ProjectorLauncher</code></td>
+<td><code>runProjectorServer(): Boolean</code></td>
+<td>Entry point for CWM</td>
+</tr>
+<tr>
+<td><code>org.jetbrains.projector.agent.MainAgent</code></td>
+<td><code>agentmain(args: String?, instrumentation: Instrumentation)</code></td>
+<td>Projector Plugin entry point</td>
+</tr>
+</tbody>
+</table>
+<h2 id="support-for-agent-classes">Support for agent classes<a class="headerlink" href="#support-for-agent-classes" title="Permanent link">&para;</a></h2>
+<p>Agent classes are now loaded in the same manner as regular Projector classes. However, if in the future ProjectorClassLoader will be set as a System ClassLoader, then ProjectorClassLoader needs to use <code>appendToClassPathForInstrumentation(String jarPath)</code> method to get the location of agent jar file. It's already implemented, so no extra work to support loading classes from agent JAR file is required.</p>
                 
               
               
@@ -628,7 +713,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../usecases/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ecosystem/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -637,19 +722,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Use cases
+                Ecosystem
               </div>
             </div>
           </a>
         
         
-          <a href="../contributing/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../works/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Contributing
+                Academic works
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

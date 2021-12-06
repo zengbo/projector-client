@@ -380,6 +380,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#force-keyboard-modifiers-mode" class="md-nav__link">
+    Force keyboard modifiers mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#assigning-connection-password" class="md-nav__link">
     Assigning connection password
   </a>
@@ -407,6 +414,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#disabling-websocket-server" class="md-nav__link">
+    Disabling WebSocket server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-ide-and-plugins-updates" class="md-nav__link">
+    Disabling IDE and plugins updates
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -423,6 +444,19 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../android/" class="md-nav__link">
+      Android
+    </a>
   </li>
 
         
@@ -510,6 +544,19 @@
   <li class="md-nav__item">
     <a href="../../dev_guide/ecosystem/" class="md-nav__link">
       Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../dev_guide/classloader/" class="md-nav__link">
+      Projector ClassLoader
     </a>
   </li>
 
@@ -727,6 +774,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#force-keyboard-modifiers-mode" class="md-nav__link">
+    Force keyboard modifiers mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#assigning-connection-password" class="md-nav__link">
     Assigning connection password
   </a>
@@ -750,6 +804,20 @@
           <li class="md-nav__item">
   <a href="#adjust-scrolling-speed" class="md-nav__link">
     Adjust scrolling speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-websocket-server" class="md-nav__link">
+    Disabling WebSocket server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-ide-and-plugins-updates" class="md-nav__link">
+    Disabling IDE and plugins updates
   </a>
   
 </li>
@@ -831,6 +899,25 @@
 <p class="admonition-title">Note</p>
 <p>If you disable this setting, the keymap won't be reverted back to what it has been set to automatically. Please set it back manually in IDE Settings/Preferences.</p>
 </div>
+<h3 id="force-keyboard-modifiers-mode">Force keyboard modifiers mode<a class="headerlink" href="#force-keyboard-modifiers-mode" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ORG_JETBRAINS_PROJECTOR_SERVER_MAC_KEYBOARD</code></td>
+<td>Boolean?</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<p>Set to <code>true</code> to make keyboard modifiers like "Option(Alt)+Minus gives Dash" work for Mac clients. Set to <code>false</code> to disable this.</p>
+<p>By default, it's dynamic (<code>null</code>): it's based on the last connected client OS.</p>
 <h3 id="assigning-connection-password">Assigning connection password<a class="headerlink" href="#assigning-connection-password" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -933,6 +1020,47 @@ After that, enable SSL on the client-side by adding the <code>wss</code> query p
 <p class="admonition-title">Bug</p>
 <p>Actually, we want to get rid of this option in the future, determining scrolling speed automatically, synced with the client. More details: <a href="https://youtrack.jetbrains.com/issue/PRJ-272">PRJ-272</a>.</p>
 </div>
+<h3 id="disabling-websocket-server">Disabling WebSocket server<a class="headerlink" href="#disabling-websocket-server" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ORG_JETBRAINS_PROJECTOR_SERVER_ENABLE_WS_SERVER</code></td>
+<td>Boolean</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>Setting this option to <code>false</code> will disable the built-in WebSocket server.<br />
+Additional transports can be added at runtime via <code>ProjectorServer.addTransport</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With default Projector distribution, this will leave you with no way to connect to it. This option is intended primarily for use with alternative embedding approaches.</p>
+</div>
+<h3 id="disabling-ide-and-plugins-updates">Disabling IDE and plugins updates<a class="headerlink" href="#disabling-ide-and-plugins-updates" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ORG_JETBRAINS_PROJECTOR_SERVER_DISABLE_IDEA_UPDATES</code></td>
+<td>Boolean</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>Setting this option to <code>false</code> will enable the platform and plugins updates.</p>
 <h2 id="difference-between-env-vars-and-system-props">Difference between env vars and system props<a class="headerlink" href="#difference-between-env-vars-and-system-props" title="Permanent link">&para;</a></h2>
 <p>The advantage of specifying a system property is that it's not passed to a child process automatically.</p>
 <p>So, for example, passwords won't be passed to a child process: this is more secure, and also it makes Projector development inside Projector easier.</p>
@@ -970,13 +1098,13 @@ After that, enable SSL on the client-side by adding the <code>wss</code> query p
           </a>
         
         
-          <a href="../../swing_user_guide/arbitrary/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../android/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Arbitrary Swing app
+                Android
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1010,6 +1138,15 @@ After that, enable SSL on the client-side by adding the <code>wss</code> query p
       
       <a href="https://github.com/JetBrains/projector-client" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://t.me/JBProjector" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/></svg>
       </a>
     
       
